@@ -133,7 +133,7 @@ class IntegrationController
     public function addHeader($key, $value = null)
     {
         if (!is_array($this->headers)) $this->headers = [];
-        list($key, $value) = explode(":", $key, 2);
+        if (strpos($key, ":") !== false) list($key, $value) = explode(":", $key, 2);
         $this->headers[] = "$key: $value";
 
         return $this;
