@@ -34,7 +34,7 @@ require_once 'vendor/autoload.php';
 ### Inicialização
 
 ```php
-use App\Controllers\Utils\IntegrationController;
+use EDGVI10\Controllers\IntegrationController;
 
 // Inicialização simples
 $client = new IntegrationController();
